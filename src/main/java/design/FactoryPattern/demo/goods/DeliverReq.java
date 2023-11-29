@@ -1,4 +1,4 @@
-package cn.bugstack.design.goods;
+package design.FactoryPattern.demo.goods;
 
 public class DeliverReq {
 

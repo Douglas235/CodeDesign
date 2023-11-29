@@ -3,9 +3,10 @@ package design.DependencyInversionPrinciple;
 import java.util.ArrayList;
 import java.util.List;
 
-public class doDrawWeight {
+public class DrawWeight implements IDraw {
     // 权重排名获取指定数量的用户，作为中奖用户
-    public List<BetUser> doDrawWeight(List<BetUser> list, int count) {
+    @Override
+    public List<BetUser> prize(List<BetUser> list, int count) {
         // 按照权重排序
         list.sort((o1, o2) -> {
             int e = o2.getUserWeight() - o1.getUserWeight();

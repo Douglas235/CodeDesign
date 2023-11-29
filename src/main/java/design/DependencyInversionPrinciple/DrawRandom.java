@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class doDrawRandom {
+public class DrawRandom implements IDraw {
     // 随机抽取指定数量的用户，作为中奖用户
-    public List<BetUser> doDrawRandom(List<BetUser> list, int count) {
+    @Override
+    public List<BetUser> prize(List<BetUser> list, int count) {
         // 集合数量很小直接返回
         if (list.size() <= count) return list;
         // 乱序集合
@@ -19,3 +20,5 @@ public class doDrawRandom {
         return prizeList;
     }
 }
+
+
